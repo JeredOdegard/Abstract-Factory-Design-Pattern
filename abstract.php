@@ -20,6 +20,7 @@
 			return new PoodleFart();
 		}
 	}
+	// Recyclable Methods
 	abstract class Bark {
 		abstract function activate();
 	}
@@ -48,12 +49,14 @@
 	}
 	
 	// Runtime Environment
-	$Manager = new PoodleManager();
-	$Manager->getBark()->activate();
-	$Manager->getFart()->activate();
 	
-	$Manager = new BernardManager();
-	$Manager->getBark()->activate();
-	$Manager->getFart()->activate();
+	// Generic Implementation
+	function makeSomeNoise(DogManager $manager) {
+		$manager->getBark()->activate();
+		$manager->getFart()->activate();
+	}
 	
+	// Function Call
+	makeSomeNoise(new PoodleManager());
+	makeSomeNoise(new BernardManager());	
 ?>
