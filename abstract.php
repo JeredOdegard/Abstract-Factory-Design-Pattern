@@ -58,5 +58,5 @@
 	
 	// Function Call
 	makeSomeNoise(new PoodleManager());
-	makeSomeNoise(new BernardManager());	
+	makeSomeNoise(new BernardManager());
 ?>
